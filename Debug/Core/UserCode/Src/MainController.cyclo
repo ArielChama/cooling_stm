@@ -1,0 +1,3 @@
+../Core/UserCode/Src/MainController.c:15:7:getCelsius	2
+../Core/UserCode/Src/MainController.c:34:6:MainController_Init	1
+../Core/UserCode/Src/MainController.c:47:6:MainController_Run	3

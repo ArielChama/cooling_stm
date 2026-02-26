@@ -1,0 +1,15 @@
+../Core/Src/main.c:92:5:main	1
+../Core/Src/main.c:152:6:SystemClock_Config	4
+../Core/Src/main.c:215:6:PeriphCommonClock_Config	2
+../Core/Src/main.c:242:13:MX_ADC1_Init	5
+../Core/Src/main.c:319:13:MX_FDCAN1_Init	2
+../Core/Src/main.c:372:13:MX_FDCAN2_Init	2
+../Core/Src/main.c:425:13:MX_I2C3_Init	4
+../Core/Src/main.c:473:13:MX_TIM2_Init	4
+../Core/Src/main.c:522:13:MX_TIM5_Init	5
+../Core/Src/main.c:576:13:MX_TIM6_Init	3
+../Core/Src/main.c:614:13:MX_USART3_UART_Init	5
+../Core/Src/main.c:662:13:MX_USB_OTG_HS_PCD_Init	2
+../Core/Src/main.c:696:13:MX_DMA_Init	1
+../Core/Src/main.c:714:13:MX_GPIO_Init	1
+../Core/Src/main.c:747:6:Error_Handler	1
