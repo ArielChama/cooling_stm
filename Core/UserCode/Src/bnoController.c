@@ -1,5 +1,6 @@
 #include "bno055.h"
 #include "bnoController.h"
+#include "vdcu_can.h"
 
 // Variáveis para armazenar o estado (devem ser persistentes)
 bno055_vec3_t velocity = {0.0f, 0.0f, 0.0f};
@@ -9,8 +10,8 @@ uint32_t lastTick = 0;
 
 
 void BnoController() {
-    bno = (bno055_t){
-        .i2c = &hi2c1, .addr = BNO_ADDR, .mode = BNO_MODE_IMU,
+	bno055_t bno = (bno055_t){
+        .i2c = &hi2c3, .addr = BNO_ADDR, .mode = BNO_MODE_IMU,
     };
 
     bno055_init(&bno);
@@ -48,16 +49,14 @@ void BnoController() {
 
         // Pequeno delay para não sobrecarregar o processador
         HAL_Delay(10);
+
+
+        // Enviar pela CAN apenas a cada 100ms (10Hz)
+        static uint32_t lastCanTick = 0;
+		if (HAL_GetTick() - lastCanTick >= 100) {
+			VDCU_CAN_SendPosition(position.x, position.y, position.z);
+			lastCanTick = HAL_GetTick();
+		}
     }
 
-    // No ficheiro bnoController.c (dentro do while(true))
-
-    // ... cálculos de integração da posição feitos anteriormente ...
-
-    // Enviar pela CAN apenas a cada 100ms (10Hz), por exemplo
-    static uint32_t lastCanTick = 0;
-    if (HAL_GetTick() - lastCanTick >= 100) {
-        VDCU_CAN_SendPosition(position.x, position.y, position.z);
-        lastCanTick = HAL_GetTick();
-    }
 }

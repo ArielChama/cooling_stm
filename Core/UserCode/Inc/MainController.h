@@ -7,21 +7,6 @@
 #define VALUE_MAX_TEMP 50
 #define TIM5_ARR 11199
 
-// Temperatura em graus Celsius
-const int ntc_temp_c[] = {
-    -40, -35, -30, -25, -20, -15, -10, -5,
-      0,   5,  10,  15,  20,  25,  30,  35,
-     40,  45,  50,  55,  60,  65,  70,  75,
-     80,  85,  90,  95, 100
-};
-
-// Resistência do NTC em ohms
-const int ntc_res_ohm[] = {
-    94331, 68175, 49796, 36743, 27377, 20590, 15626, 11960,
-     9231,  7180,  5628,  4444,  3533,  2828,  2278,  1847,
-     1506,  1235,  1018,   844,   703,   589,   495,   418,
-      355,   303,   259,   222,   192
-};
 
 
 extern ADC_HandleTypeDef hadc1;

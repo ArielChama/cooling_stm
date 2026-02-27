@@ -1,11 +1,11 @@
 #include <stdint.h>
 #include <stdio.h>
-#include <stm32f4xx.h>
+#include <stm32h7xx.h>
 
 #include "bno055.h"
-#include "stm32f4xx_hal.h"
-#include "stm32f4xx_hal_def.h"
-#include "stm32f4xx_hal_i2c.h"
+#include "stm32h7xx_hal.h"
+#include "stm32h7xx_hal_def.h"
+#include "stm32h7xx_hal_i2c.h"
 
 /**
  * Initialize the Bosch BNO055 Sensor

@@ -7,6 +7,8 @@
 
 #ifndef USERCODE_INC_VDCU_CAN_H_
 #define USERCODE_INC_VDCU_CAN_H_
+#include <stdint.h>
+#include "stm32h7xx_hal.h"
 
 typedef union {
   uint64_t value;
@@ -19,7 +21,10 @@ typedef union {
   uint8_t byte[8];
 } BytesUnion;
 
-void VDCU_CAN_SendTemp(int16_t torque, bool enable);
+void VDCU_CAN_SendTemp(int16_t temp[]);
 
+void VDCU_CAN_SendPosition(float x, float y, float z);
+
+extern FDCAN_HandleTypeDef hfdcan1;
 
 #endif /* USERCODE_INC_VDCU_CAN_H_ */

@@ -1,5 +1,5 @@
 Core/UserCode/Src/MainController.o: ../Core/UserCode/Src/MainController.c \
- /home/mr-chama/Documentos/ISEL/IFS/cooling_stm/Core/UserCode/Inc/MainController.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/MainController.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -38,8 +38,10 @@ Core/UserCode/Src/MainController.o: ../Core/UserCode/Src/MainController.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
- ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h
-/home/mr-chama/Documentos/ISEL/IFS/cooling_stm/Core/UserCode/Inc/MainController.h:
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/mathUtils.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bnoController.h
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/MainController.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
@@ -79,3 +81,5 @@ Core/UserCode/Src/MainController.o: ../Core/UserCode/Src/MainController.c \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/mathUtils.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bnoController.h:

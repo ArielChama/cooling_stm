@@ -1,5 +1,6 @@
 #include "MainController.h"
 #include "mathUtils.h"
+#include "bnoController.h"
 
 #define NUM_NTCS 2
 
@@ -10,6 +11,23 @@ const float SERIES_RESISTOR = 10000.0; // Resistor fixo que usaste no divisor de
 const float BETA = 3950.0;             // Valor típico para NTC 10k (ajusta se necessário)
 const float TEMP_NOMINAL = 25.0;       // Temp de referência da tabela
 const float RESISTOR_NOMINAL = 10000.0;// Resistência aos 25°C
+
+// Temperatura em graus Celsius
+double ntc_temp_c[] = {
+    -40, -35, -30, -25, -20, -15, -10, -5,
+      0,   5,  10,  15,  20,  25,  30,  35,
+     40,  45,  50,  55,  60,  65,  70,  75,
+     80,  85,  90,  95, 100
+};
+
+// Resistência do NTC em ohms
+double ntc_res_ohm[] = {
+    94331, 68175, 49796, 36743, 27377, 20590, 15626, 11960,
+     9231,  7180,  5628,  4444,  3533,  2828,  2278,  1847,
+     1506,  1235,  1018,   844,   703,   589,   495,   418,
+      355,   303,   259,   222,   192
+};
+
 
 
 float getCelsius(int rawAdc) {
@@ -35,6 +53,10 @@ void MainController_Init(void) {
 
 	HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
+
+
+
+	BnoController();
 }
 
 void MainController_Run(void) {
@@ -50,5 +72,6 @@ void MainController_Run(void) {
 		}
 	}
 
-	VDCU_CAN_SendTemp(temp_value_NTC);
+
+	//VDCU_CAN_SendTemp(temp_value_NTC);
 }

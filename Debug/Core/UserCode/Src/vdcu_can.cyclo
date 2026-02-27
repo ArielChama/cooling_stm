@@ -1,0 +1,2 @@
+../Core/UserCode/Src/vdcu_can.c:5:6:VDCU_CAN_SendTemp	1
+../Core/UserCode/Src/vdcu_can.c:28:6:VDCU_CAN_SendPosition	1

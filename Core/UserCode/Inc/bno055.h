@@ -10,11 +10,11 @@
 #ifndef DRV_BNO055_H_
 #define DRV_BNO055_H_
 
-#include <stm32f4xx.h>
+#include <stm32h7xx.h>
 
 #include "stdbool.h"
-#include "stm32f4xx_hal_i2c.h"
-#include "stm32f4xx_hal_i2c_ex.h"
+#include "stm32h7xx_hal_i2c.h"
+#include "stm32h7xx_hal_i2c_ex.h"
 
 typedef uint8_t u8;
 typedef uint16_t u16;

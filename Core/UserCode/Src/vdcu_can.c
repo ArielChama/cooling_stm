@@ -1,4 +1,6 @@
-
+#include "vdcu_can.h"
+#include "stm32h7xx_hal.h"
+#include "stm32h7xx_hal_fdcan.h"
 
 void VDCU_CAN_SendTemp(int16_t temp[])
 {
@@ -22,8 +24,6 @@ void VDCU_CAN_SendTemp(int16_t temp[])
   HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &tx_header, tx_data.byte);
 }
 
-
-// No ficheiro vdcu_can.c
 
 void VDCU_CAN_SendPosition(float x, float y, float z)
 {
