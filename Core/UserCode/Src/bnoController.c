@@ -7,14 +7,15 @@ bno055_vec3_t velocity = {0.0f, 0.0f, 0.0f};
 bno055_vec3_t position = {0.0f, 0.0f, 0.0f};
 uint32_t lastTick = 0;
 
+bno055_t bno = (bno055_t){
+	.i2c = &hi2c3, .addr = BNO_ADDR_ALT, .mode = BNO_MODE_IMU,
+};
 
+#define COMP_FILT_ALPHA 0.05f
 
 void BnoController() {
-	bno055_t bno = (bno055_t){
-        .i2c = &hi2c3, .addr = BNO_ADDR, .mode = BNO_MODE_IMU,
-    };
-
     bno055_init(&bno);
+
     lastTick = HAL_GetTick();
 
     bno055_vec3_t linear_acc;
@@ -38,11 +39,11 @@ void BnoController() {
         if (linear_acc.z > -0.1f && linear_acc.z < 0.1f) linear_acc.z = 0;
 
         // 4. Integração para Velocidade (v = v0 + a*dt)
-        velocity.x += linear_acc.x * dt;
-        velocity.y += linear_acc.y * dt;
-        velocity.z += linear_acc.z * dt;
+        velocity.x = (1.0f - COMP_FILT_ALPHA) * (velocity.x + linear_acc.x * dt);
+		velocity.y = (1.0f - COMP_FILT_ALPHA) * (velocity.y + linear_acc.y * dt);
+		velocity.z = (1.0f - COMP_FILT_ALPHA) * (velocity.z + linear_acc.z * dt);
 
-        // 5. Integração para Posição (s = s0 + v*dt)
+		// 5. Integração para Posição (s = s0 + v*dt)
         position.x += velocity.x * dt;
         position.y += velocity.y * dt;
         position.z += velocity.z * dt;
