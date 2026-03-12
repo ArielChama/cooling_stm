@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (14.3.rel1)
+# Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -35,34 +35,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Sensor_cooling_H7
+BUILD_ARTIFACT_NAME := cooling_stm
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Sensor_cooling_H7.elf \
+cooling_stm.elf \
 
 MAP_FILES += \
-Sensor_cooling_H7.map \
+cooling_stm.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Sensor_cooling_H7.list \
+cooling_stm.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Sensor_cooling_H7.elf secondary-outputs
+main-build: cooling_stm.elf secondary-outputs
 
 # Tool invocations
-Sensor_cooling_H7.elf Sensor_cooling_H7.map: $(OBJS) $(USER_OBJS) /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/STM32H7B0RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Sensor_cooling_H7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/STM32H7B0RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Sensor_cooling_H7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+cooling_stm.elf cooling_stm.map: $(OBJS) $(USER_OBJS) /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/STM32H7B0RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "cooling_stm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/STM32H7B0RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cooling_stm.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -71,14 +71,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Sensor_cooling_H7.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Sensor_cooling_H7.list"
+cooling_stm.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "cooling_stm.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Sensor_cooling_H7.elf Sensor_cooling_H7.list Sensor_cooling_H7.map default.size.stdout
+	-$(RM) cooling_stm.elf cooling_stm.list cooling_stm.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

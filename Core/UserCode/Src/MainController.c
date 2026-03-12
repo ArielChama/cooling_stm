@@ -53,6 +53,9 @@ void MainController_Init(void) {
 
 	HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+
+	htim2.Instance->CCR1 = 0;
 
 	BnoController();
 }
@@ -64,9 +67,11 @@ void MainController_Run(void) {
 		if (temp_value_NTC[i] >= VALUE_MAX_TEMP) {
 			htim5.Instance->CCR1 = 0.85 * TIM5_ARR;
 			htim5.Instance->CCR2 = 0.85 * TIM5_ARR;
+			htim2.Instance->CCR1 = 0.5 * TIM2_ARR;
 		} else {
 			htim5.Instance->CCR1 = 0.25 * TIM5_ARR;
 			htim5.Instance->CCR2 = 0.25 * TIM5_ARR;
+			htim2.Instance->CCR1 = 0;
 		}
 	}
 
