@@ -36,6 +36,8 @@ float getCelsius(int rawAdc) {
   // 1. Calcular resistência do NTC (Assume-se divisor de tensão com 10k ligado ao VCC)
   float resistencia = SERIES_RESISTOR / (1023.0 / (float)rawAdc - 1.0);
 
+  //float rawAdc = 1023.0 / (SERIES_RESISTOR / resistencia + 1.0);
+
   float temp = linear_interpolation(ntc_res_ohm, ntc_temp_c, 29, resistencia, false);
 
   return temp;

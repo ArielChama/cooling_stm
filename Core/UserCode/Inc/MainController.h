@@ -6,6 +6,7 @@
 #define VALUE_EACH_STEP 3.3 / 4096 // 4096 is 12^12
 #define VALUE_MAX_TEMP 50
 #define TIM5_ARR 11199
+#define TIM2_ARR 61399
 
 
 
