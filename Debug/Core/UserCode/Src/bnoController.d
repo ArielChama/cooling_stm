@@ -1,5 +1,5 @@
 Core/UserCode/Src/bnoController.o: ../Core/UserCode/Src/bnoController.c \
- /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bno055.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bno055.h \
  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7b0xx.h \
  ../Drivers/CMSIS/Include/core_cm7.h \
@@ -41,9 +41,9 @@ Core/UserCode/Src/bnoController.o: ../Core/UserCode/Src/bnoController.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
- /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bnoController.h \
- /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/vdcu_can.h
-/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bno055.h:
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bnoController.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/vdcu_can.h
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bno055.h:
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7b0xx.h:
 ../Drivers/CMSIS/Include/core_cm7.h:
@@ -85,5 +85,5 @@ Core/UserCode/Src/bnoController.o: ../Core/UserCode/Src/bnoController.c \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
-/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bnoController.h:
-/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/vdcu_can.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bnoController.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/vdcu_can.h:

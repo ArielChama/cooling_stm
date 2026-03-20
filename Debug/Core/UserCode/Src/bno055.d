@@ -39,7 +39,7 @@ Core/UserCode/Src/bno055.o: ../Core/UserCode/Src/bno055.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h \
- /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bno055.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bno055.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
@@ -82,6 +82,6 @@ Core/UserCode/Src/bno055.o: ../Core/UserCode/Src/bno055.c \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h:
-/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/bno055.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/bno055.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:

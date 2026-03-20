@@ -1,5 +1,5 @@
 Core/UserCode/Src/vdcu_can.o: ../Core/UserCode/Src/vdcu_can.c \
- /home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/vdcu_can.h \
+ /home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/vdcu_can.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -40,7 +40,7 @@ Core/UserCode/Src/vdcu_can.o: ../Core/UserCode/Src/vdcu_can.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h
-/home/mr-chama/STM32CubeIDE/workspace_2.0.0/cooling_stm/Core/UserCode/Inc/vdcu_can.h:
+/home/arielchama/Documents/ISEL/IFS/Tasks/Github/cooling_stm/Core/UserCode/Inc/vdcu_can.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:

@@ -13,6 +13,7 @@
 extern ADC_HandleTypeDef hadc1;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim5;
+extern TIM_HandleTypeDef htim2;
 
 // Funções que serão chamadas pelo main.c gerado
 float getCelsius(int rawAdc);

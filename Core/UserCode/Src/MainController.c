@@ -32,9 +32,10 @@ double ntc_res_ohm[] = {
 
 float getCelsius(int rawAdc) {
   if (rawAdc == 0) return -273.15; // Evita divisão por zero
+  if (rawAdc >= 4095) return 150.0; // CHANGE  2^12 - 1 = 4095
 
   // 1. Calcular resistência do NTC (Assume-se divisor de tensão com 10k ligado ao VCC)
-  float resistencia = SERIES_RESISTOR / (1023.0 / (float)rawAdc - 1.0);
+  float resistencia = SERIES_RESISTOR / (4095.0 / (float)rawAdc - 1.0);
 
   //float rawAdc = 1023.0 / (SERIES_RESISTOR / resistencia + 1.0);
 
@@ -59,12 +60,13 @@ void MainController_Init(void) {
 
 	htim2.Instance->CCR1 = 0;
 
-	BnoController();
+	//BnoController();
 }
 
 void MainController_Run(void) {
 	for (int i = 0; i < NUM_NTCS; i++) {
-		temp_value_NTC[i] = getCelsius(temp_value_NTC_BIN[i]);
+		uint16_t value = temp_value_NTC_BIN[i] & 0xc;
+		temp_value_NTC[i] = getCelsius(value);
 
 		if (temp_value_NTC[i] >= VALUE_MAX_TEMP) {
 			htim5.Instance->CCR1 = 0.85 * TIM5_ARR;
